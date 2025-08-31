@@ -11,7 +11,8 @@ In traditional programming, humans write the rules and the computer follows them
 - **Learning from Data**  
   ML uses **data** (numbers, images, text, etc.) to learn patterns.  
   *Example:* Showing a computer thousands of pictures of cats and dogs, and it learns how to tell them apart.
-  <img width="1356" height="668" alt="image" src="https://github.com/user-attachments/assets/d9ec5d77-252f-4961-8790-9ca617a7f91a" />
+  
+  <img width="1100" height="568" alt="image" src="https://github.com/user-attachments/assets/d9ec5d77-252f-4961-8790-9ca617a7f91a" />
 
 - **Improvement Over Time**  
   The more examples it sees, the better it becomes.  
