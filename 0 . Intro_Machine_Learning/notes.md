@@ -1,4 +1,4 @@
-<img width="1356" height="668" alt="image" src="https://github.com/user-attachments/assets/8c1e38c0-ab6b-4bd8-a9f6-7aa92e3dc81e" /># 🧠 What is Machine Learning?
+# What is Machine Learning?
 
 **Machine Learning (ML)** is a branch of **Artificial Intelligence (AI)** that teaches computers to **learn from data and experience** rather than following step-by-step instructions.
 
