@@ -96,3 +96,5 @@ X_norm = (X - median) / IQR
 | IQR             | Interquartile range (Q3 − Q1)                          |
 | X_norm          | Normalized value                                       |
 
+----
+
