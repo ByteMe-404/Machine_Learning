@@ -21,7 +21,6 @@ Many Machine Learning algorithms are sensitive to differences in magnitude — a
 
 X_norm = (X - X_min) / (X_max - X_min)
 
-**Symbols:**
 
 | Symbol           | Meaning                                              |
 |-----------------|------------------------------------------------------|
@@ -40,8 +39,7 @@ X_norm = (X - X_min) / (X_max - X_min)
 ## 2. Z-score Standardization (Standard Scaling)
 
 **Formula:**
-X_norm = (X - mean) / std
-**Symbols:**
+X_norm = (X - μ) / σ
 
 | Symbol           | Meaning                                              |
 |-----------------|------------------------------------------------------|
@@ -60,7 +58,7 @@ X_norm = (X - mean) / std
 
 **Formula:**
 X_norm = X / |X_max|
-**Symbols:**
+
 
 | Symbol           | Meaning                                              |
 |-----------------|------------------------------------------------------|
@@ -75,7 +73,6 @@ X_norm = X / |X_max|
 **Formula:**
 X_norm = (X - median) / IQR
 
-**Symbols:**
 
 | Symbol           | Meaning                                              |
 |-----------------|------------------------------------------------------|
