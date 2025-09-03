@@ -19,9 +19,7 @@ Many Machine Learning algorithms are sensitive to differences in magnitude — a
 
 **Formula:**
 
-\[
-X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
-\]
+X_norm = (X - X_min) / (X_max - X_min)
 
 **Symbols:**
 
@@ -42,11 +40,7 @@ X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
 ## 2. Z-score Standardization (Standard Scaling)
 
 **Formula:**
-
-\[
-X_{\text{norm}} = \frac{X - \mu}{\sigma}
-\]
-
+X_norm = (X - mean) / std
 **Symbols:**
 
 | Symbol           | Meaning                                              |
@@ -65,11 +59,7 @@ X_{\text{norm}} = \frac{X - \mu}{\sigma}
 ## 3. Max-Abs Scaling
 
 **Formula:**
-
-\[
-X_{\text{norm}} = \frac{X}{|X_{\max}|}
-\]
-
+X_norm = X / |X_max|
 **Symbols:**
 
 | Symbol           | Meaning                                              |
@@ -83,10 +73,7 @@ X_{\text{norm}} = \frac{X}{|X_{\max}|}
 ## 4. Robust Scaling
 
 **Formula:**
-
-\[
-X_{\text{norm}} = \frac{X - \text{median}}{\text{IQR}}
-\]
+X_norm = (X - median) / IQR
 
 **Symbols:**
 
