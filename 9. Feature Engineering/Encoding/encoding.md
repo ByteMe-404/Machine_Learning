@@ -5,7 +5,7 @@ Feature encoding converts categorical data into numerical representations so mac
 ---
 
 ## 1. Label Encoding
-** When to use : **
+**When to use :**
 -Categorical features has **ordinal relationship** (e.g. , low < medium < high ).
 -Algorithms like **tree-based models** or linear models that can handle integers.
 
