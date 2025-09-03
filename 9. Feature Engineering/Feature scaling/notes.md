@@ -15,54 +15,100 @@ Many Machine Learning algorithms are sensitive to differences in magnitude — a
 
 ## 🔹 Common Methods
 
-### 1. Min-Max Scaling (Normalization)
-Rescales values to a **fixed range [0, 1]**.  
+## 1. Min-Max Normalization
 
-Formula:  
+**Formula:**
+
 \[
-x' = \frac{x - x_{min}}{x_{max} - x_{min}}
+X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
 \]
 
-Example:  
-- Height range: 150–200 cm.  
-- A value of 175 → \((175 - 150) / (200 - 150) = 0.5\).  
+**Symbols:**
+
+| Symbol           | Meaning                                              |
+|-----------------|------------------------------------------------------|
+| X               | Original value of a feature                          |
+| X_min           | Minimum value of the feature in the dataset         |
+| X_max           | Maximum value of the feature in the dataset         |
+| X_norm          | Normalized value scaled to [0,1]                    |
+
+**Explanation:**  
+- Subtract **X_min** to shift the minimum to 0.  
+- Divide by the range (X_max − X_min) to scale the maximum to 1.  
+- Result: All values lie between 0 and 1.
 
 ---
 
-### 2. Standardization (Z-score Scaling)
-Centers data around **mean = 0 and standard deviation = 1**.  
+## 2. Z-score Standardization (Standard Scaling)
 
-Formula:  
+**Formula:**
+
 \[
-x' = \frac{x - \mu}{\sigma}
+X_{\text{norm}} = \frac{X - \mu}{\sigma}
 \]
 
-Example:  
-- Exam score = 85, mean = 70, std = 10.  
-- \( (85 - 70) / 10 = 1.5 \) → 1.5 standard deviations above average.  
+**Symbols:**
+
+| Symbol           | Meaning                                              |
+|-----------------|------------------------------------------------------|
+| X               | Original value of the feature                          |
+| μ (mu)          | Mean of the feature values in the dataset           |
+| σ (sigma)       | Standard deviation of the feature values            |
+| X_norm          | Normalized value with mean 0 and standard deviation 1|
+
+**Explanation:**  
+- Subtract **mean (μ)** to center data around 0.  
+- Divide by **standard deviation (σ)** to scale spread to 1.  
 
 ---
 
-### 3. Robust Scaling
-Uses **median and IQR (Interquartile Range)** → less sensitive to outliers.  
+## 3. Max-Abs Scaling
 
-Formula:  
+**Formula:**
+
 \[
-x' = \frac{x - \text{median}}{\text{IQR}}
+X_{\text{norm}} = \frac{X}{|X_{\max}|}
 \]
 
-Good for datasets with extreme values.  
+**Symbols:**
+
+| Symbol           | Meaning                                              |
+|-----------------|------------------------------------------------------|
+| X               | Original value of the feature                          |
+| X_max           | Maximum absolute value of the feature               |
+| X_norm          | Normalized value scaled to [-1, 1]                  |
 
 ---
 
-### 4. Log / Power Transform
-- Apply **log, square root, or Box-Cox transform** to reduce skewness.  
-- Useful when features have exponential growth (e.g., income, population).  
+## 4. Robust Scaling
+
+**Formula:**
+
+\[
+X_{\text{norm}} = \frac{X - \text{median}}{\text{IQR}}
+\]
+
+**Symbols:**
+
+| Symbol           | Meaning                                              |
+|-----------------|------------------------------------------------------|
+| X               | Original value of the feature                          |
+| median          | Median value of the feature                          |
+| IQR             | Interquartile range (Q3 − Q1)                        |
+| X_norm          | Normalized value resistant to outliers               |
 
 ---
 
-## 🔹 Quick Analogy
-Scaling is like **converting different currencies to the same unit** 💵💶💴 before comparing them.  
-Without scaling, one feature could unfairly dominate because of its bigger numbers.  
+**Summary of Symbols:**
 
----
+| Symbol           | Meaning                                              |
+|-----------------|------------------------------------------------------|
+| X               | Original value of the feature                          |
+| X_min           | Minimum value of the feature                           |
+| X_max           | Maximum value of the feature                           |
+| μ               | Mean of the feature                                    |
+| σ               | Standard deviation of the feature                      |
+| median          | Median of the feature                                   |
+| IQR             | Interquartile range (Q3 − Q1)                          |
+| X_norm          | Normalized value                                       |
+
